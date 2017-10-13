@@ -9,7 +9,7 @@ The main goal of this project is **to allow a robot arm to learn by itself how t
 <img style="float: right;" src="Misc/Plot.png">
 <br>
 
-An **Unity environment** was created to simulate the robot and his envirnement.
+A **Unity environment** was created to simulate the robot and its envirnement.
 
 + The robot is in the center
 + The red cube represents the button
