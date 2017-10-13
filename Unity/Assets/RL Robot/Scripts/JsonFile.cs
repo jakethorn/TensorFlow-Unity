@@ -29,7 +29,6 @@ namespace Jake.Json
 		[SerializeField]
 		private string relativeBuildPath;
 #pragma warning restore 649, 414
-
 		public string Path
 		{
 			get

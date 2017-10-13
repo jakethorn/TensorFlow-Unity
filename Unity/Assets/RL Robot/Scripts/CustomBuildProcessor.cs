@@ -1,4 +1,5 @@
 ﻿#if UNITY_EDITOR
+using System;
 using UnityEditor;
 using UnityEditor.Build;
 
@@ -6,7 +7,7 @@ namespace Jake
 {
 	public class CustomBuildProcessor : IPreprocessBuild
 	{
-		public static event System.Action<string> OnPrepocessBuild;
+		public static event Action<string> OnPrepocessBuild;
 
 		public int callbackOrder { get { return 0; } }
 
@@ -20,11 +21,14 @@ namespace Jake
 
 		private bool IsStandalone(BuildTarget target)
 		{
-			return	target == BuildTarget.StandaloneWindows ||
-					target == BuildTarget.StandaloneWindows64 ||
-					target == BuildTarget.StandaloneLinux ||
-					target == BuildTarget.StandaloneLinux64 ||
-					target == BuildTarget.StandaloneLinuxUniversal;
+			return	target == BuildTarget.StandaloneWindows			||
+					target == BuildTarget.StandaloneWindows64		||
+					target == BuildTarget.StandaloneLinux			||
+					target == BuildTarget.StandaloneLinux64			||
+					target == BuildTarget.StandaloneLinuxUniversal	||
+					target == BuildTarget.StandaloneOSXIntel		||
+					target == BuildTarget.StandaloneOSXIntel64		||
+					target == BuildTarget.StandaloneOSXUniversal;
 		}
 	}
 }

@@ -52,9 +52,6 @@
     <Compile Include="serialization.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="socketio.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="tcp.py">
       <SubType>Code</SubType>
     </Compile>

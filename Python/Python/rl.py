@@ -46,8 +46,11 @@ def train():
         #Restore a model
         restore = prompt('\nRestore session (y/ n): ', 'y')
         if restore == 'y':
-            saver.restore(sess, restore_destination + "model.ckpt")
-            print("The model was successfully restored !")
+            try:
+                saver.restore(sess, restore_destination + "model.ckpt")
+                print("The model was successfully restored !")
+            except Exception as exception:
+                print("Sorry, couldn't find a model to restore !")
         else:
             print("No model has been restored !")
 

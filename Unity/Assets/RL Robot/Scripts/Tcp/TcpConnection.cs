@@ -25,7 +25,9 @@ namespace Jake.Tcp
 		void Start()
 		{
 			if (autoConnect)
+			{
 				Connect();
+			}
 		}
 		
 		void OnApplicationQuit()
