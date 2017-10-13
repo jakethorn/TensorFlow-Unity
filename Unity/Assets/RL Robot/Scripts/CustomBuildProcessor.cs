@@ -12,7 +12,7 @@ namespace Jake
 
 		public void OnPreprocessBuild(BuildTarget target, string path)
 		{
-			if (IsStandalone(target))
+			if (IsStandalone(target) && OnPrepocessBuild != null)
 			{
 				OnPrepocessBuild(path);
 			}
